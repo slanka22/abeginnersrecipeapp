@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: #cdffcd;
+  padding: 16px;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  padding: 8px;
+  background-color: white;
+}
+button:hover {
+  background-color: lightgray;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 240px;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 8px;
+}
+.card:hover {
+  background-color: lightgray;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+}
