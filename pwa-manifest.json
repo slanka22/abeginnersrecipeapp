@@ -1,0 +1,31 @@
+{
+    "name": "PWA for HCDD 340",
+    "short_name": "HCDD 340",
+    "description": "Progressive Web App for the Human-Centered Design for Mobile Computing course (HCDD 340)",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#F2665E",
+    "background_color": "#96BEE6",
+    "icons": [
+        {
+            "src": "icons/shield-96.png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "icons/shield-128.png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "icons/shield-192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icons/shield-256.png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "icons/shield-512.png",
+            "sizes": "512x512"
+        }
+    ]
+}
