@@ -8,24 +8,8 @@
     "background_color": "#96BEE6",
     "icons": [
         {
-            "src": "icons/shield-96.png",
-            "sizes": "96x96"
-        },
-        {
-            "src": "icons/shield-128.png",
-            "sizes": "128x128"
-        },
-        {
-            "src": "icons/shield-192.png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "icons/shield-256.png",
-            "sizes": "256x256"
-        },
-        {
-            "src": "icons/shield-512.png",
-            "sizes": "512x512"
+            "src": "logos/B.png",
+            "sizes": "500x500"
         }
     ]
 }
