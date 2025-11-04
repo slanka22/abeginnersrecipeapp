@@ -1,0 +1,15 @@
+{
+    "name": "A Beginners Recipe App",
+    "short_name": "Recipe App",
+    "description": "All are welcome, beginners are encouraged!",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#F2665E",
+    "background_color": "#96BEE6",
+    "icons": [
+        {
+            "src": "logos/B.png",
+            "sizes": "500x500"
+        }
+    ]
+}
