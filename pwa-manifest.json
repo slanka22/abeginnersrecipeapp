@@ -1,7 +1,7 @@
 {
-    "name": "PWA for HCDD 340",
-    "short_name": "HCDD 340",
-    "description": "Progressive Web App for the Human-Centered Design for Mobile Computing course (HCDD 340)",
+    "name": "A Beginners Recipe App",
+    "short_name": "Recipe App",
+    "description": "All are welcome, beginners are encouraged!",
     "start_url": "/",
     "display": "standalone",
     "theme_color": "#F2665E",
