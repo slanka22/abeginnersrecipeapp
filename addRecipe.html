@@ -4,16 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Recipe</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../CSS Files/styles.css">
 </head>
 <body>
   <header>
     <nav>
-      <h2>Add a New Recipe</h2>
+      <h2>Recipe App</h2>
     </nav>
   </header>
 
-  <div>
-    
+  <div class="mainContentContainer">
+    <h1>Create a Recipe</h1>
+    <div class="inputsContainer">
+      <label for="dishTitle">Dish Title:</label>
+      <input type="text"  id="dishTitle" placeholder="Egg salad" required>
+
+      <label for="prepTime">Prep Time (in minutes):</label>
+      <input type="number"  id="prepTime" placeholder="30" required>
+
+      <label for="cookTime">Cook Time (in minutes):</label>
+      <input type="number"  id="cookTime" placeholder="30" required>
+
+      <label for="servings">Servings:</label>
+      <input type="text"  id="servings" placeholder="4 servings" required>
+
+      <label for="ingredients">Ingredients:</label>
+      <textarea id="ingredients" required></textarea>
+
+      <label for="instructions">Instructions:</label>
+      <textarea id="instructions" required></textarea>
+    </div>
+
+    <button>Save Changes</button>
   </div>
 </body>

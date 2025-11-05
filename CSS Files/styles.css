@@ -69,3 +69,14 @@ button:hover {
 }
 
 /* addRecipe */
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#ingredients, #instructions {
+  height: 200px;
+}
+#instructions {
+  height: 500px;
+}
