@@ -1,20 +1,41 @@
-{
-    "RecipeName": "Greek Salad",
-    "Ingredients": [
-        "2 cups chopped cucumbers",
-        "1 cup cherry tomatoes, halved",
-        "1/2 cup sliced red onions",
-        "1/2 cup Kalamata olives",
-        "1/2 cup feta cheese, crumbled",
-        "2 tablespoons olive oil",
-        "1 tablespoon red wine vinegar",
-        "1 teaspoon dried oregano",
-        "Salt and pepper to taste"
-    ],
-    "Instructions": [
-        "In a large bowl, combine cucumbers, cherry tomatoes, red onions, olives, and feta cheese.",
-        "In a small bowl, whisk together olive oil, red wine vinegar, dried oregano, salt, and pepper.",
-        "Pour the dressing over the salad and toss to combine.",
-        "Serve immediately or refrigerate for 30 minutes to allow flavors to meld."
-    ]
-}
+[
+    {
+        "RecipeName": "Greek Salad",
+        "PrepTime": "30",
+        "CookTime": "0",
+        "Servings": "4",
+        "Ingredients": [
+            "2 cups chopped cucumbers",
+            "1 cup cherry tomatoes, halved",
+            "1/2 cup sliced red onions",
+            "1/2 cup Kalamata olives",
+            "1/2 cup feta cheese, crumbled",
+            "2 tablespoons olive oil",
+            "1 tablespoon red wine vinegar",
+            "1 teaspoon dried oregano",
+            "Salt and pepper to taste"
+        ],
+        "Instructions": [
+            "In a large bowl, combine cucumbers, cherry tomatoes, red onions, olives, and feta cheese.",
+            "In a small bowl, whisk together olive oil, red wine vinegar, dried oregano, salt, and pepper.",
+            "Pour the dressing over the salad and toss to combine.",
+            "Serve immediately or refrigerate for 30 minutes to allow flavors to meld."
+        ]
+    },
+    {
+        "RecipeName": "Recipe2",
+        "PrepTime": "30",
+        "CookTime": "60",
+        "Servings": "4",
+        "Ingredients": [
+            "2 cups ingredient 1",
+            "1 cup ingredient 2"
+        ],
+        "Instructions": [
+            "In a large bowl, combine cucumbers, cherry tomatoes, red onions, olives, and feta cheese.",
+            "In a small bowl, whisk together olive oil, red wine vinegar, dried oregano, salt, and pepper.",
+            "Pour the dressing over the salad and toss to combine.",
+            "Serve immediately or refrigerate for 30 minutes to allow flavors to meld."
+        ]
+    }
+]

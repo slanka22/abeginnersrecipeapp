@@ -80,3 +80,11 @@ button:hover {
 #instructions {
   height: 500px;
 }
+
+.timeContainer {
+  display: flex;
+  flex-direction: row;
+}
+.prepTimeContainer, .cookTimeContainer {
+  flex-grow: 1;
+}

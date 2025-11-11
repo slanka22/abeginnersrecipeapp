@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Recipe</title>
   <link rel="stylesheet" href="../CSS Files/styles.css">
+  <script src="../JavaScript Files/NewRecipe.JS" defer></script>
 </head>
+
 <body>
   <header>
     <nav>
@@ -14,27 +16,44 @@
   </header>
 
   <div class="mainContentContainer">
-    <h1>Create a Recipe</h1>
+    <h1 style = "text-align: center;">Create a Recipe</h1>
     <div class="inputsContainer">
-      <label for="dishTitle">Dish Title:</label>
-      <input type="text"  id="dishTitle" placeholder="Egg salad" required>
+      <label for="dishTitle" style = "text-align: left; font-weight: bold;">Dish Title:</label>
+      <input type="text"  id="dishTitle" placeholder="Egg Salad" required>
 
-      <label for="prepTime">Prep Time (in minutes):</label>
-      <input type="number"  id="prepTime" placeholder="30" required>
+      <br>
 
-      <label for="cookTime">Cook Time (in minutes):</label>
-      <input type="number"  id="cookTime" placeholder="30" required>
+      <label for="dishDescr" style = "text-align: left; font-weight: bold;">Dish Description:</label>
+      <input type="text"  id="dishDescr" placeholder="A salad that consists of tomatoes, cucumbers, onions, feta cheese, onions, etc." required>
 
-      <label for="servings">Servings:</label>
-      <input type="text"  id="servings" placeholder="4 servings" required>
+      <br>
 
-      <label for="ingredients">Ingredients:</label>
+      <div class="timeContainer">
+        <div class="prepTimeContainer">
+          <label for="prepTime" style = "text-align: left; font-weight: bold;">Prep Time (in minutes):</label>
+          <input type="number"  id="prepTime" placeholder="30" required>
+        </div>
+        <div class="cookTimeContainer">
+          <label for="cookTime" style = "text-align: left; font-weight: bold;">Cook Time (in minutes):</label>
+          <input type="number"  id="cookTime" placeholder="30" required>
+        </div>
+      </div>
+      <br>
+
+      <label for="servings" style = "text-align: left; font-weight: bold;">Servings:</label>
+      <input type="number"  id="servings" placeholder="4 Servings" required>
+
+      <br>
+
+      <label for="ingredients" style = "text-align: left; font-weight: bold;">Ingredients:</label>
       <textarea id="ingredients" required></textarea>
 
-      <label for="instructions">Instructions:</label>
+      <br>
+
+      <label for="instructions" style = "text-align: left; font-weight: bold;">Instructions:</label>
       <textarea id="instructions" required></textarea>
     </div>
 
-    <button>Save Changes</button>
+    <button id="saveChangesBtn">Save Changes</button>
   </div>
 </body>

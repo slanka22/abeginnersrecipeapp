@@ -4,12 +4,28 @@
     "description": "All are welcome, beginners are encouraged!",
     "start_url": "/",
     "display": "standalone",
-    "theme_color": "#F2665E",
-    "background_color": "#96BEE6",
+    "theme_color": "#CDFFCD",
+    "background_color": "#FFFFFF",
     "icons": [
         {
-            "src": "logos/B.png",
-            "sizes": "500x500"
+            "src": "logos/96.png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "logos/128.png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "logos/192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "logos/256.png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "logos/512.png",
+            "sizes": "512x512"
         }
     ]
 }
