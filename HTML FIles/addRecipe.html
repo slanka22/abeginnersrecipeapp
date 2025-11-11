@@ -11,7 +11,11 @@
 <body>
   <header>
     <nav>
-      <h2>Recipe App</h2>
+      <button id="homeButton"><h2>Home</h2></button>
+       <div class="logoContainer">
+          <img src="../logos/512.png" alt="Recipe App Logo">
+          <h2>Recipe App</h2>
+        </div>
     </nav>
   </header>
 
@@ -57,3 +61,11 @@
     <button id="saveChangesBtn">Save Changes</button>
   </div>
 </body>
+
+<script> 
+  const homeButton = document.getElementById("homeButton");
+
+  homeButton.addEventListener("click", function() {
+      window.location.href = "index.html";
+  });
+</script>

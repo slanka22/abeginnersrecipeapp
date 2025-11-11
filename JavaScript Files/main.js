@@ -6,15 +6,14 @@ addEventListener('DOMContentLoaded', () => {
 function loadRecipes(){
     let restoredRecipes = JSON.parse(localStorage.getItem("createdRecipes"));
     const container = document.querySelector(".cardContainer");
+    container.innerHTML = "";
 
     restoredRecipies.foreach(recipe => {
         let recipeTitle = recipe.title;
         let recipeDescr = recipe.description;
         let recipePrep = recipe.prepTime;
         let recipeCook = recipe.cookTime;
-        let recipeServings = recipe.servings; 
-        let recipeIngrid = recipe.ingridients; 
-        let recipeInstruct = recipe.instructions; 
+        let recipeServings = recipe.servings;
         
         const card = document.createElement("a");
         card.innerHTML = `
@@ -23,6 +22,11 @@ function loadRecipes(){
         <p>Total Time: ${recipePrep + recipeCook} mins</p>
         <p>Servings: ${recipeServings} servings</p>
         <p>${recipeDescr}</p>`
+
+        card.addEventListener("click", function() {
+            sessionStorage.setItem("selectedRecipe", JSON.stringify(recipe));
+            window.location.href = "recipeView.html";
+        });
 
         container.appendChild(card);
     })

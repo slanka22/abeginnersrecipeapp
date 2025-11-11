@@ -1,7 +1,9 @@
 document.getElementById("saveChangesBtn").addEventListener("click", () => {
     let recipesList = JSON.parse(localStorage.getItem("createdRecipes")) || [];
+    let currentRecipeCount = recipesList.length;
 
     const newRecipe = {
+        recipeID: currentRecipeCount + 1,
         title: document.getElementById("dishTitle").value,
         description: document.getElementById("dishDescr").value,
         prepTime: document.getElementById("prepTime").value,
