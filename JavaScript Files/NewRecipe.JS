@@ -20,6 +20,6 @@ document.getElementById("saveChangesBtn").addEventListener("click", () => {
 function saveRecipes(recipesList) {
     localStorage.setItem("createdRecipes", JSON.stringify(recipesList));
     // reloads page and resets the addRecipe.html page so the user can add another recipe
-    location.reload();
     alert("Recipe successfully saved!");
+    location.reload();
 }

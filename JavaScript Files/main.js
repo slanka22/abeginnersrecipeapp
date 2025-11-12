@@ -8,7 +8,7 @@ function loadRecipes(){
     const container = document.querySelector(".cardContainer");
     container.innerHTML = "";
 
-    restoredRecipies.foreach(recipe => {
+    restoredRecipes.forEach(recipe => {
         let recipeTitle = recipe.title;
         let recipeDescr = recipe.description;
         let recipePrep = recipe.prepTime;
@@ -16,18 +16,23 @@ function loadRecipes(){
         let recipeServings = recipe.servings;
         
         const card = document.createElement("a");
+        card.href = `recipeView.html?id=${recipe.recipeID}`;
+
         card.innerHTML = `
+        <div class="card">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBC7QuVp-W5YBTP3qWiZIuSYFy8zkQFmLk8hBOvGhDG8UxuqyMilIJcuuQLhC151Qph0ISV7DKJ22xyW4XmSkBZ1lMTp9ixhQqYLx-VqRu&s=10" alt="${recipeTitle}">
         <h3>${recipeTitle}</h3>
         <p>Total Time: ${recipePrep + recipeCook} mins</p>
         <p>Servings: ${recipeServings} servings</p>
-        <p>${recipeDescr}</p>`
+        <p>${recipeDescr}</p>
+        </div>
+        `
 
-        card.addEventListener("click", function() {
-            sessionStorage.setItem("selectedRecipe", JSON.stringify(recipe));
-            window.location.href = "recipeView.html";
-        });
+        // card.addEventListener("click", function() {
+        //     sessionStorage.setItem("selectedRecipe", JSON.stringify(recipe));
+        //     window.location.href = "recipeView.html";
+        // });
 
         container.appendChild(card);
-    })
+    });
 }
