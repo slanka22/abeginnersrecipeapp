@@ -7,10 +7,10 @@ document.querySelector("#clearSearchButton").addEventListener("click", () => {
 
 function searchRecipes() {
     try {
-        const searchInput = document.getElementsById("searchInput").value.toLowerCase();
-        const cardContainer = document.getElementById("cardContainer");
+        const searchInput = document.getElementById("searchInput").value.toLowerCase();
+        const cardContainer = document.querySelector(".cardContainer"); 
         for (let card of cardContainer.children) {
-            const title = card.querySelector(".cardTitle").textContent.toLowerCase();
+            const title = card.querySelector("h3").textContent.toLowerCase(); 
             if (title.includes(searchInput)) {
                 card.style.display = "block"; 
             } else {

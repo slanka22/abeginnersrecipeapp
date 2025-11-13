@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Recipe</title>
+  <link rel="stylesheet" href="../CSS Files/styles.css">
+  <script src="../JavaScript Files/NewRecipe.JS" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <button id="homeButton"><h2>Home</h2></button>
+       <div class="logoContainer">
+          <img src="../logos/512.png" alt="Recipe App Logo">
+          <h2>Recipe App</h2>
+        </div>
+    </nav>
+  </header>
+
+  <div class="mainContentContainer">
+    <h1 style = "text-align: center;">Create a Recipe</h1>
+    <div class="inputsContainer">
+      <label for="dishTitleUpdate" style = "text-align: left; font-weight: bold;">Dish Title:</label>
+      <input type="text"  id="dishTitleUpdate" placeholder="Egg Salad" required>
+
+      <br>
+
+      <label for="dishDescrUpdate" style = "text-align: left; font-weight: bold;">Dish Description:</label>
+      <input type="text"  id="dishDescrUpdate" placeholder="A salad that consists of tomatoes, cucumbers, onions, feta cheese, onions, etc." required>
+
+      <br>
+
+      <div class="timeContainer">
+        <div class="prepTimeContainer">
+          <label for="prepTimeUpdate" style = "text-align: left; font-weight: bold;">Prep Time (in minutes):</label>
+          <input type="number"  id="prepTimeUpdate" placeholder="30" required>
+        </div>
+        <div class="cookTimeContainer">
+          <label for="cookTimeUpdate" style = "text-align: left; font-weight: bold;">Cook Time (in minutes):</label>
+          <input type="number"  id="cookTimeUpdate" placeholder="30" required>
+        </div>
+      </div>
+      <br>
+
+      <label for="servingsUpdate" style = "text-align: left; font-weight: bold;">Servings:</label>
+      <input type="number"  id="servingsUpdate" placeholder="4 Servings" required>
+
+      <br>
+
+      <label for="ingredientsUpdate" style = "text-align: left; font-weight: bold;">Ingredients:</label>
+      <textarea id="ingredientsUpdate" required></textarea>
+
+      <br>
+
+      <label for="instructionsUpdate" style="text-align: left; font-weight: bold;">Instructions:</label>
+      <textarea id="instructionsUpdate" required></textarea>
+    </div>
+
+    <button id="saveChangesBtnUpdate">Save Changes</button>
+  </div>
+</body>
+
+<script> 
+  const homeButton = document.getElementById("homeButton");
+
+  homeButton.addEventListener("click", function() {
+      window.location.href = "index.html";
+  });
+</script>

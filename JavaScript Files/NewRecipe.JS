@@ -21,5 +21,5 @@ function saveRecipes(recipesList) {
     localStorage.setItem("createdRecipes", JSON.stringify(recipesList));
     // reloads page and resets the addRecipe.html page so the user can add another recipe
     alert("Recipe successfully saved!");
-    location.reload();
+    window.location.href = "index.html";
 }
