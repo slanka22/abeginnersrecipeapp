@@ -21,6 +21,14 @@ nav {
   flex-direction: row;
   justify-content: space-between;
 }
+#navTitle {
+  color: black;
+}
+.navSearchButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
 
 button {
   padding: 8px;
@@ -64,8 +72,37 @@ button:hover {
 
 /* Dark mode CSS */
 @media (prefers-color-scheme: dark) {
-  html {
+  /* html {
     color-scheme: dark;
+  } */
+  body {
+    background-color: rgb(26, 27, 32);
+  }
+  .card {
+    border: 2px solid white;
+  }
+  .card:hover {
+    background-color: rgb(53, 55, 66);
+  }
+  p, h1, h2, h3 {
+    color: white;
+  }
+  label {
+    color: white;
+  }
+  input {
+    background-color: rgb(60, 63, 77);
+    color: white;
+  }
+  input::placeholder {
+    color: rgb(194, 194, 194);
+  }
+  textarea {
+    background-color: rgb(60, 63, 77);
+    color: white;
+  }
+  textarea::placeholder {
+    color: rgb(194, 194, 194);
   }
   img {
     /* Turns down brightness */
