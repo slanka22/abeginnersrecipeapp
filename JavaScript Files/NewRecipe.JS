@@ -1,3 +1,30 @@
+let ingredientsArray = [];
+
+const addIngred = (event) => {
+    const ingredList = document.querySelector("#ingredientList")
+    const ingredTextField = document.querySelector("#newIngredient").value
+
+    ingredientsArray.push(ingredTextField);
+
+    const listItem = document.createElement("li");
+    const listText = document.createElement('span');
+    const listBtn = document.createElement('button');
+
+    listText.textContent = ingredTextField;
+    listItem.appendChild(listText);
+
+    listBtn.textContent = "Delete";
+    listBtn.classList.add("deleteIngredientBtn");
+    listBtn.addEventListener("click",(event) => {
+        ingredList.removeChild(listItem)
+    });
+
+    listItem.appendChild(listBtn);
+    ingredList.appendChild(listItem);
+}
+
+document.querySelector("#addIngredient").addEventListener("click", addIngred);
+
 document.getElementById("saveChangesBtn").addEventListener("click", () => {
     let recipesList = JSON.parse(localStorage.getItem("createdRecipes")) || [];
     let currentRecipeCount = recipesList.length;
@@ -23,27 +50,3 @@ function saveRecipes(recipesList) {
     alert("Recipe successfully saved!");
     window.location.href = "index.html";
 }
-
-const addIngred = (event) => {
-    const ingredList = document.querySelector("#ingredientList")
-    const ingredTextField = document.querySelector("#newIngredient").value
-
-    const listItem = document.createElement("li");
-    const listText = document.createElement('span');
-    const listBtn = document.createElement('button');
-
-    listText.textContent = ingredTextField;
-    listItem.appendChild(listText);
-
-    listBtn.textContent = "Delete";
-    listBtn.classList.add("deleteIngredientBtn");
-    listBtn.addEventListener("click",(event) => {
-        ingredList.removeChild(listItem)
-    });
-
-    listItem.appendChild(listBtn);
-    ingredList.appendChild(listItem);
-}
-
-document.querySelector("#addIngredient").addEventListener("click", addIngred);
-
