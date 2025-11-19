@@ -24,5 +24,19 @@ function saveRecipes(recipesList) {
     window.location.href = "index.html";
 }
 
-document.querySelector("#btn_add")
-    .addEventListener("click", addModule);
+document.querySelector("#addIngridient").addEventListener("click", addIngrid);
+
+const addIngrid = (event) => {
+    const ingridList = document.querySelector("#ingridientList")
+    const ingridTextField = document.querySelector("#newIngridient").value
+
+    const listItem = document.createElement("li");
+    const listText = document.createElement('span');
+    const listBtn = document.createElement('button');
+
+    listText.textContent = ingridTextField;
+    
+
+
+}
+
