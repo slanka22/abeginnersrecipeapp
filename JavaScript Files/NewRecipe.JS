@@ -23,3 +23,6 @@ function saveRecipes(recipesList) {
     alert("Recipe successfully saved!");
     window.location.href = "index.html";
 }
+
+document.querySelector("#btn_add")
+    .addEventListener("click", addModule);
