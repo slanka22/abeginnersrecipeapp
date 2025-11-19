@@ -1,6 +1,6 @@
-document.getElementById("saveChangesBtnUpdate").addEventListener("click") {
+document.getElementById("saveChangesBtnUpdate").addEventListener("click", () => {
     editRecipe();
-}
+});
 
 function editRecipe() {
     const urlParams = new URLSearchParams(window.location.search);
