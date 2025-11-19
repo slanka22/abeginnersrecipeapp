@@ -24,19 +24,26 @@ function saveRecipes(recipesList) {
     window.location.href = "index.html";
 }
 
-document.querySelector("#addIngridient").addEventListener("click", addIngrid);
-
 const addIngrid = (event) => {
-    const ingridList = document.querySelector("#ingridientList")
-    const ingridTextField = document.querySelector("#newIngridient").value
+    const ingredList = document.querySelector("#ingredientList")
+    const ingredTextField = document.querySelector("#newIngredient").value
 
     const listItem = document.createElement("li");
     const listText = document.createElement('span');
     const listBtn = document.createElement('button');
 
     listText.textContent = ingridTextField;
-    
+    listItem.appendChild(listText);
 
+    listBtn.textContent = "Delete";
+    listBtn.classList.add("deleteIngredientBtn");
+    listBtn.addEventListener("click",(event) => {
+        ingridList.removeChild(listItem)
+    });
 
+    listItem.appendChild(listBtn);
+    ingridList.appendChild(listItem);
 }
+
+document.querySelector("#addIngredient").addEventListener("click", addIngrid);
 
