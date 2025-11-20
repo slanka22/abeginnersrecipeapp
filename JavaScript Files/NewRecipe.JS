@@ -1,4 +1,5 @@
 let ingredientsArray = [];
+let instructionArray = [];
 
 const addIngred = (event) => {
     const ingredList = document.querySelector("#ingredientList")
@@ -30,6 +31,37 @@ const addIngred = (event) => {
 };
 
 document.querySelector("#addIngredient").addEventListener("click", addIngred);
+
+const addInstruct = (event) => {
+    const instructList = document.querySelector("#instructionList")
+    const instructTextField = document.querySelector("#newInstruction").value
+
+    instructionArray.push(instructTextField);
+
+    const listItem = document.createElement("li");
+    const listText = document.createElement('span');
+    const listBtn = document.createElement('button');
+
+    listText.textContent = instructTextField;
+    listItem.appendChild(listText);
+
+    listBtn.textContent = "Delete";
+    listBtn.classList.add("deleteInstructionBtn");
+    listBtn.addEventListener("click",(event) => {
+        instructList.removeChild(listItem)
+
+        instructionArray = instructionArray.filter(item => item !== instructTextField);
+        console.log(instructionArray)
+    });
+
+    listItem.appendChild(listBtn);
+    instructList.appendChild(listItem);
+
+    document.querySelector("#newInstruction").value = "";
+    console.log(instructionArray)
+};
+
+document.querySelector("#addInstruction").addEventListener("click", addInstruct);
 
 document.getElementById("saveChangesBtn").addEventListener("click", () => {
     let recipesList = JSON.parse(localStorage.getItem("createdRecipes")) || [];

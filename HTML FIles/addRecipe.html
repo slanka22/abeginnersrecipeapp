@@ -74,8 +74,17 @@
 
       <br>
 
-      <label for="instructions" style = "text-align: left; font-weight: bold;">Instructions:</label>
-      <textarea id="instructions" required></textarea>
+      <div class="instructionContainer">
+        <div class="addInstructionsContainer">
+          <label for="instructions" style = "text-align: left; font-weight: bold;">Instructions:</label><br>
+          <input type="text" name="newInstruction" id="newInstruction">
+          <button id="addInstruction">Add</button><br><br>
+        </div>
+        <div class="instructionListContainer"><br>
+          <ul id="instructionList">
+          </ul>
+        </div>
+      </div>
     </div>
 
     <button class="navBtn" id="saveChangesBtn">Save Changes</button>
