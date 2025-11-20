@@ -1,4 +1,4 @@
-document.getElementById("saveChangesBtnUpdate").addEventListener("click") {
+document.getElementById("saveChangesBtnUpdate").addEventListener("click"); {
     editRecipe();
 }
 
