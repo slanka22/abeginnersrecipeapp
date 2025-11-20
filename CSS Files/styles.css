@@ -197,7 +197,9 @@ nav {
   color: white;
   border-color: #4CAF50;
 }
+
 .ingredientListContainer, .instructionListContainer{
+  border: 2px solid black;
   li {
     margin-bottom: 8px;
   }
