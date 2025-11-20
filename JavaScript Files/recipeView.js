@@ -19,10 +19,11 @@ function loadRecipes(){
     document.querySelector("#cookTime").textContent = recipe.cookTime;
     document.querySelector("#totalTime").textContent = parseInt(recipe.cookTime) + parseInt(recipe.prepTime);
     document.querySelector("#servings").textContent = recipe.servings;
-    // need to load from an array
-    document.querySelector("#ingredientsText").textContent = recipe.ingredients;
-    // need to load from an array
-    document.querySelector("#instructionsText").textContent = recipe.instructions;
+
+    
+
+    /* document.querySelector("#ingredientsText").textContent = recipe.ingredients;
+    document.querySelector("#instructionsText").textContent = recipe.instructions; */
 }
 
 const deleteRecipeButton = document.querySelector("#deleteButton");

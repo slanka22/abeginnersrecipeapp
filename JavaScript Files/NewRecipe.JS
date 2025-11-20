@@ -75,7 +75,7 @@ document.getElementById("saveChangesBtn").addEventListener("click", () => {
         cookTime: document.getElementById("cookTime").value,
         servings: document.getElementById("servings").value,
         ingredients: ingredientsArray,
-        instructions: document.getElementById("instructions").value
+        instructions: instructionArray
     };
 
     recipesList.push(newRecipe);
