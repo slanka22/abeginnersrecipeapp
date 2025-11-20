@@ -11,6 +11,18 @@ const recipe = recipes.find(function(currentRecipe) {
     return currentRecipe.recipeID === recipeID;
 });
 
+function pushList(array, listElementID){
+    const listElement = document.getElementById(listElementID);
+    listElement.innerHTML = '';
+
+    // loops through array and creates to 'li' for each item
+    array.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        listElement.appendChild(listItem);
+    });
+}
+
 function loadRecipes(){
     // Display the recipe details
     document.querySelector("#recipeTitle").textContent = recipe.title;
@@ -20,7 +32,7 @@ function loadRecipes(){
     document.querySelector("#totalTime").textContent = parseInt(recipe.cookTime) + parseInt(recipe.prepTime);
     document.querySelector("#servings").textContent = recipe.servings;
 
-    
+
 
     /* document.querySelector("#ingredientsText").textContent = recipe.ingredients;
     document.querySelector("#instructionsText").textContent = recipe.instructions; */
