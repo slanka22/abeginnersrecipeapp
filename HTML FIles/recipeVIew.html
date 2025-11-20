@@ -19,10 +19,10 @@
       </a>
       <div class="navButtons">
         <a href="addRecipe.html">
-          <button>Add a recipe</button>
+          <button class="navBtn">Add a recipe</button>
         </a>
         <a href="index.html">
-          <button>View Recipes</button>
+          <button class="navBtn">View Recipes</button>
         </a>
       </div>
     </nav>
@@ -33,9 +33,9 @@
         <h1 id="recipeTitle"> Default Recipe Title </h1>
         <div class="buttonContainer">
           <a href="editRecipe.html">
-            <button>Edit Recipe</button>
+            <button class="navBtn">Edit Recipe</button>
           </a>
-          <button id="deleteButton">Delete Recipe</button>
+          <button class="navBtn" id="deleteButton">Delete Recipe</button>
         </div>
       </div>
       <img class = "recipeImage" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBC7QuVp-W5YBTP3qWiZIuSYFy8zkQFmLk8hBOvGhDG8UxuqyMilIJcuuQLhC151Qph0ISV7DKJ22xyW4XmSkBZ1lMTp9ixhQqYLx-VqRu&s=10" alt = "Default Recipe Image">
@@ -44,29 +44,21 @@
       <p>Total Time: <span id="totalTime">30</span> minutes</p>
       <p>Prep Time: <span id="prepTime">10</span> minutes</p>
       <p>Cook Time: <span id="cookTime">8</span> minutes</p>
-      <p>Servings: <span id="servings">4</span> meals</p>
+      <p>Servings: <span id="servings">4</span> meals</p><br>
       <p id="recipeDescription">Description goes here</p>
       <hr>
     </div>
 
     <div class = "ingredientsCard"> 
         <h2 class = "ingredientsTitle"> Ingredients </h2>
-        <p id="ingredientsText">Example Ingredients here</p>
-        <!-- <ul class = "ingredientsList">
-          <li>Ingredient 1</li>
-          <li>Ingredient 2</li>
-          <li>Ingredient 3</li>
-        </ul> -->
+        <ul class = "ingredientsList" id="ingredientsList">
+        </ul>
     </div>
 
     <div class = "instructionsCard">
       <h2 class = "instructionsTitle"> Instructions </h2>
-      <p id="instructionsText">Example Instructinos here</p>
-        <!-- <ol class = "instructionsList">
-          <li>Step 1</li>
-          <li>Step 2</li>
-          <li>Step 3</li>
-        </ol> -->
+        <ol class = "instructionsList" id="instructionsList">
+        </ol>
     </div>
   </div>
 

@@ -11,6 +11,18 @@ const recipe = recipes.find(function(currentRecipe) {
     return currentRecipe.recipeID === recipeID;
 });
 
+function pushList(array, listElementID){
+    const listElement = document.getElementById(listElementID);
+    listElement.innerHTML = '';
+
+    // loops through array and creates to 'li' for each item
+    array.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        listElement.appendChild(listItem);
+    });
+}
+
 function loadRecipes(){
     // Display the recipe details
     document.querySelector("#recipeTitle").textContent = recipe.title;
@@ -19,8 +31,18 @@ function loadRecipes(){
     document.querySelector("#cookTime").textContent = recipe.cookTime;
     document.querySelector("#totalTime").textContent = parseInt(recipe.cookTime) + parseInt(recipe.prepTime);
     document.querySelector("#servings").textContent = recipe.servings;
-    document.querySelector("#ingredientsText").textContent = recipe.ingredients;
-    document.querySelector("#instructionsText").textContent = recipe.instructions;
+
+    if (recipe.ingredients && Array.isArray(recipe.ingredients)){
+        pushList(recipe.ingredients, 'ingredientsList');
+    }
+    if (recipe.instructions && Array.isArray(recipe.instructions)){
+        pushList(recipe.instructions, 'instructionsList');
+    }
+
+
+
+    /* document.querySelector("#ingredientsText").textContent = recipe.ingredients;
+    document.querySelector("#instructionsText").textContent = recipe.instructions; */
 }
 
 const deleteRecipeButton = document.querySelector("#deleteButton");

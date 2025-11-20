@@ -1,3 +1,68 @@
+let ingredientsArray = [];
+let instructionArray = [];
+
+const addIngred = (event) => {
+    const ingredList = document.querySelector("#ingredientList")
+    const ingredTextField = document.querySelector("#newIngredient").value
+
+    ingredientsArray.push(ingredTextField);
+
+    const listItem = document.createElement("li");
+    const listText = document.createElement('span');
+    const listBtn = document.createElement('button');
+
+    listText.textContent = ingredTextField;
+    listItem.appendChild(listText);
+
+    listBtn.textContent = "Delete";
+    listBtn.classList.add("deleteIngredientBtn");
+    listBtn.addEventListener("click",(event) => {
+        ingredList.removeChild(listItem)
+
+        ingredientsArray = ingredientsArray.filter(item => item !== ingredTextField);
+        console.log(ingredientsArray)
+    });
+
+    listItem.appendChild(listBtn);
+    ingredList.appendChild(listItem);
+
+    document.querySelector("#newIngredient").value = "";
+    console.log(ingredientsArray)
+};
+
+document.querySelector("#addIngredient").addEventListener("click", addIngred);
+
+const addInstruct = (event) => {
+    const instructList = document.querySelector("#instructionList")
+    const instructTextField = document.querySelector("#newInstruction").value
+
+    instructionArray.push(instructTextField);
+
+    const listItem = document.createElement("li");
+    const listText = document.createElement('span');
+    const listBtn = document.createElement('button');
+
+    listText.textContent = instructTextField;
+    listItem.appendChild(listText);
+
+    listBtn.textContent = "Delete";
+    listBtn.classList.add("deleteInstructionBtn");
+    listBtn.addEventListener("click",(event) => {
+        instructList.removeChild(listItem)
+
+        instructionArray = instructionArray.filter(item => item !== instructTextField);
+        console.log(instructionArray)
+    });
+
+    listItem.appendChild(listBtn);
+    instructList.appendChild(listItem);
+
+    document.querySelector("#newInstruction").value = "";
+    console.log(instructionArray)
+};
+
+document.querySelector("#addInstruction").addEventListener("click", addInstruct);
+
 document.getElementById("saveChangesBtn").addEventListener("click", () => {
     let recipesList = JSON.parse(localStorage.getItem("createdRecipes")) || [];
     let currentRecipeCount = recipesList.length;
@@ -9,8 +74,8 @@ document.getElementById("saveChangesBtn").addEventListener("click", () => {
         prepTime: document.getElementById("prepTime").value,
         cookTime: document.getElementById("cookTime").value,
         servings: document.getElementById("servings").value,
-        ingredients: document.getElementById("ingredients").value,
-        instructions: document.getElementById("instructions").value
+        ingredients: ingredientsArray,
+        instructions: instructionArray
     };
 
     recipesList.push(newRecipe);

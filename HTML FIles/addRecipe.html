@@ -23,7 +23,7 @@
             <button>Add a recipe</button>
           </a> -->
           <a href="index.html">
-            <button>View Recipes</button>
+            <button class="navBtn">View Recipes</button>
           </a>
         </div>
       </div>
@@ -60,16 +60,32 @@
 
       <br>
 
-      <label for="ingredients" style = "text-align: left; font-weight: bold;">Ingredients:</label>
-      <textarea id="ingredients" required></textarea>
+      <div class="addItemContainer">
+        <div class="addIngredientsContainer">
+          <label for="ingredients" style = "text-align: left; font-weight: bold;">Ingredients:</label><br>
+          <input type="text" name="newIngredient" id="newIngredient">
+          <button id="addIngredient">Add</button><br>
+        </div>
+        <div class="addInstructionsContainer">
+          <label for="instructions" style = "text-align: left; font-weight: bold;">Instructions:</label><br>
+          <input type="text" name="newInstruction" id="newInstruction">
+          <button id="addInstruction">Add</button><br>
+        </div>
+      </div>
 
-      <br>
-
-      <label for="instructions" style = "text-align: left; font-weight: bold;">Instructions:</label>
-      <textarea id="instructions" required></textarea>
+      <div class="listContainer">
+        <div class="ingredientListContainer"><br>
+          <ul id="ingredientList">
+          </ul>
+        </div>
+        <div class="instructionListContainer"><br>
+          <ol id="instructionList">
+          </ol>
+        </div>
+      </div>
     </div>
 
-    <button id="saveChangesBtn">Save Changes</button>
+    <button class="navBtn" id="saveChangesBtn">Save Changes</button>
   </div>
 </body>
 
