@@ -17,11 +17,17 @@ const addIngred = (event) => {
     listBtn.classList.add("deleteIngredientBtn");
     listBtn.addEventListener("click",(event) => {
         ingredList.removeChild(listItem)
+
+        ingredientsArray = ingredientsArray.filter(item => item !== ingredTextField);
+        console.log(ingredientsArray)
     });
 
     listItem.appendChild(listBtn);
     ingredList.appendChild(listItem);
-}
+
+    document.querySelector("#newIngredient").value = "";
+    console.log(ingredientsArray)
+};
 
 document.querySelector("#addIngredient").addEventListener("click", addIngred);
 
@@ -36,7 +42,7 @@ document.getElementById("saveChangesBtn").addEventListener("click", () => {
         prepTime: document.getElementById("prepTime").value,
         cookTime: document.getElementById("cookTime").value,
         servings: document.getElementById("servings").value,
-        ingredients: document.getElementById("ingredients").value,
+        ingredients: ingredientsArray,
         instructions: document.getElementById("instructions").value
     };
 

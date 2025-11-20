@@ -30,11 +30,11 @@ nav {
   gap: 16px;
 }
 
-button {
+.navBtn {
   padding: 8px;
   background-color: white;
 }
-button:hover {
+.navBtn:hover {
   background-color: lightgray;
 }
 
@@ -168,6 +168,37 @@ button:hover {
   align-items: flex-start;
 }
 
-#deleteIngredientBtn {
+.deleteIngredientBtn {
+  background-color: rgb(221, 221, 221);
+  color: black;
+  border: none;
+  padding: 4px 8px;
+  margin-left: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.deleteIngredientBtn:hover {
+  background-color: #ff4b4b;
+  color: white;
+}
 
+#addIngredient {
+  padding: 8px 14px;
+  background-color: rgb(221, 221, 221);
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#addIngredient:hover {
+  background-color: #4CAF50; /* green hover */
+  color: white;
+  border-color: #4CAF50;
+}
+.ingredientListContainer {
+  li {
+    margin-bottom: 8px;
+  }
 }
