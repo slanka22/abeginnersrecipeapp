@@ -32,6 +32,13 @@ function loadRecipes(){
     document.querySelector("#totalTime").textContent = parseInt(recipe.cookTime) + parseInt(recipe.prepTime);
     document.querySelector("#servings").textContent = recipe.servings;
 
+    if (recipe.ingredients && Array.isArray(recipe.ingredients)){
+        pushList(recipe.ingredients, 'ingredientsList');
+    }
+    if (recipe.instructions && Array.isArray(recipe.instructions)){
+        pushList(recipe.instructions, 'instructionsList');
+    }
+
 
 
     /* document.querySelector("#ingredientsText").textContent = recipe.ingredients;
