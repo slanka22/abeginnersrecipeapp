@@ -161,12 +161,31 @@ nav {
 .cookTimeContainer input[type="number"] {
   width: 60%;
 }
-.addItemContainer, .listContainer{
+.addItemContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* gap: 300px;
+  margin-left: 100px;
+  align-items: flex-start; */
+}
+
+.addItemContainer {
+  width: 100%;
+}
+.addIngredientsContainer, .addInstructionsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.ingredientTextBoxButton {
   display: flex;
   flex-direction: row;
-  gap: 300px;
-  margin-left: 100px;
-  align-items: flex-start;
+  gap: 4px;
+}
+.ingredientInput {
+  flex: 1;
 }
 
 .deleteIngredientBtn, .deleteInstructionBtn {
@@ -199,12 +218,15 @@ nav {
   border-color: #4CAF50;
 }
 
-.ingredientListContainer, .instructionListContainer{
-  li {
-    margin-bottom: 8px;
-    margin-left: 20px;
-  }
+.ingredientListContainer, .instructionListContainer {
+  display: block;
 }
-.listContainer{
-  gap: 395px;
+/* wrap li, elements */
+#ingredientList li span,
+#instructionList li span {
+  display: inline;  /* or just don't set display at all */
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
