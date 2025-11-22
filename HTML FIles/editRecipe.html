@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Recipe</title>
+  <title>Edit Recipe</title>
   <link rel="stylesheet" href="../CSS Files/styles.css">
-  <script src="../JavaScript Files/NewRecipe.JS" defer></script>
+  <script src="../JavaScript Files/editRecipe.JS" defer></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
   </header>
 
   <div class="mainContentContainer">
-    <h1 style = "text-align: center;">Create a Recipe</h1>
+    <h1 style = "text-align: center;">Edit a Recipe</h1>
     <div class="inputsContainer">
       <label for="dishTitleUpdate" style = "text-align: left; font-weight: bold;">Dish Title:</label>
       <input type="text"  id="dishTitleUpdate" placeholder="Egg Salad" required>
@@ -50,23 +50,37 @@
 
       <br>
 
-      <label for="ingredientsUpdate" style = "text-align: left; font-weight: bold;">Ingredients:</label>
-      <textarea id="ingredientsUpdate" required></textarea>
+      <div class="addItemContainer">
+        <div class="addIngredientsContainer">
+          <label for="newIngredient" style = "text-align: left; font-weight: bold;">Ingredients:</label>
+          <br>
+          <div class="ingredientTextBoxButton">
+            <input class="ingredientInput" type="text" name="newIngredient" id="newIngredient">
+            <button id="addIngredient">Add</button>
+          </div>
 
-      <br>
+          <div class="ingredientListContainer"><br>
+            <ul id="ingredientList">
+            </ul>
+          </div>
+        </div>
 
-      <label for="instructionsUpdate" style="text-align: left; font-weight: bold;">Instructions:</label>
-      <textarea id="instructionsUpdate" required></textarea>
+        <div class="addInstructionsContainer">
+          <label for="newInstruction" style = "text-align: left; font-weight: bold;">Instructions:</label>
+          <br>
+          <div class="ingredientTextBoxButton">
+            <input class="ingredientInput"type="text" name="newInstruction" id="newInstruction">
+            <button id="addInstruction">Add</button>
+          </div>
+
+          <div class="instructionListContainer"><br>
+            <ol id="instructionList">
+            </ol>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <button id="saveChangesBtnUpdate">Save Changes</button>
+    <button class="navBtn" id="saveChangesBtnUpdate">Save Changes</button>
   </div>
 </body>
-
-<script> 
-  const homeButton = document.getElementById("homeButton");
-
-  homeButton.addEventListener("click", function() {
-      window.location.href = "index.html";
-  });
-</script>

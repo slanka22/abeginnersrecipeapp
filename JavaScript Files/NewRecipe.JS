@@ -1,6 +1,7 @@
 let ingredientsArray = [];
 let instructionArray = [];
 
+// adds ingredients to list
 const addIngred = (event) => {
     const ingredList = document.querySelector("#ingredientList")
     const ingredTextField = document.querySelector("#newIngredient").value
@@ -30,8 +31,7 @@ const addIngred = (event) => {
     console.log(ingredientsArray)
 };
 
-document.querySelector("#addIngredient").addEventListener("click", addIngred);
-
+// adds instructions to list
 const addInstruct = (event) => {
     const instructList = document.querySelector("#instructionList")
     const instructTextField = document.querySelector("#newInstruction").value
@@ -61,8 +61,11 @@ const addInstruct = (event) => {
     console.log(instructionArray)
 };
 
+// event listeners for adding ingredients / instructions
+document.querySelector("#addIngredient").addEventListener("click", addIngred);
 document.querySelector("#addInstruction").addEventListener("click", addInstruct);
 
+// saves to object
 document.getElementById("saveChangesBtn").addEventListener("click", () => {
     let recipesList = JSON.parse(localStorage.getItem("createdRecipes")) || [];
     let currentRecipeCount = recipesList.length;
@@ -82,6 +85,7 @@ document.getElementById("saveChangesBtn").addEventListener("click", () => {
     saveRecipes(recipesList); 
 });
 
+// saves to localstorage
 function saveRecipes(recipesList) {
     localStorage.setItem("createdRecipes", JSON.stringify(recipesList));
     // reloads page and resets the addRecipe.html page so the user can add another recipe

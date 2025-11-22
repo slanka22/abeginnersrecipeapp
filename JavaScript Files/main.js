@@ -16,6 +16,7 @@ function loadRecipes(){
         let recipeServings = recipe.servings;
         
         const card = document.createElement("a");
+        // query string created here
         card.href = `recipeView.html?id=${recipe.recipeID}`;
 
         card.innerHTML = `

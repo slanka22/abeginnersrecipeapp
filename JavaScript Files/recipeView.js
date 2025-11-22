@@ -60,3 +60,14 @@ function deleteRecipe() {
     window.location.href = "index.html";
 }
 deleteRecipeButton.addEventListener('click', deleteRecipe);
+
+// adds querystring for ID
+// Edit recipe button
+const editRecipeButton = document.querySelector("#editButton");
+
+function editRecipe() {
+    // Navigate to edit page with recipe ID in query string
+    window.location.href = `editRecipe.html?id=${recipeID}`;
+}
+
+editRecipeButton.addEventListener('click', editRecipe);
