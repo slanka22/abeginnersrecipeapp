@@ -23,7 +23,7 @@ function loadRecipeData(recipeID) {
     });
 
     if (recipe) {
-        // Populate basic input fields
+        // Populate input fields and checks if fields exist
         if (recipe.title) {
             document.getElementById("dishTitleUpdate").value = recipe.title;
         } else {
@@ -54,17 +54,21 @@ function loadRecipeData(recipeID) {
             document.getElementById("servingsUpdate").value = '';
         }
 
-        // Populate ingredients list
+        // Populate ingredients list using helper function
+            // checks if recipe.ingredients exists and that it is an array
         if (recipe.ingredients && Array.isArray(recipe.ingredients)) {
+            // creates copy of the array
             ingredientsArray = recipe.ingredients.slice();
+            /// selects ingredientsList <ul>
             const ingredList = document.querySelector("#ingredientList");
             
+            // for each loop using helper function
             recipe.ingredients.forEach(function(ingredient) {
                 addIngredientToList(ingredient, ingredList);
             });
         }
 
-        // Populate instructions list
+        // Populate instructions list using helper function
         if (recipe.instructions && Array.isArray(recipe.instructions)) {
             instructionArray = recipe.instructions.slice();
             const instructList = document.querySelector("#instructionList");
@@ -108,9 +112,11 @@ function addInstructionToList(instructTextField, instructList) {
     const listText = document.createElement('span');
     const listBtn = document.createElement('button');
 
+    // creating li
     listText.textContent = instructTextField;
     listItem.appendChild(listText);
 
+    // creating button
     listBtn.textContent = "Delete";
     listBtn.classList.add("deleteInstructionBtn");
     listBtn.addEventListener("click", function(event) {
