@@ -68,10 +68,15 @@ document.querySelector("#addInstruction").addEventListener("click", addInstruct)
 // saves to object
 document.getElementById("saveChangesBtn").addEventListener("click", () => {
     let recipesList = JSON.parse(localStorage.getItem("createdRecipes")) || [];
-    let currentRecipeCount = recipesList.length;
+    //let currentRecipeCount = recipesList.length;
+    let lastID = 0;
+    if (recipesList.length > 0) {
+        lastID = recipesList[recipesList.length - 1].recipeID;
+    }
 
     const newRecipe = {
-        recipeID: currentRecipeCount + 1,
+        //recipeID: currentRecipeCount + 1,
+        recipeID: lastID + 1,
         title: document.getElementById("dishTitle").value,
         description: document.getElementById("dishDescr").value,
         prepTime: document.getElementById("prepTime").value,
