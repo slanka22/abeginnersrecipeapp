@@ -22,6 +22,15 @@ function loadRecipeData(recipeID) {
         return r.recipeID === recipeID;
     });
 
+    if (recipe.recipeImage) {
+    uploadedImageData = recipe.recipeImage; // PRELOAD EXISTING IMAGE
+    const img = document.getElementById("capturedImage");
+    if (img) {
+        img.src = uploadedImageData;
+        img.style.display = "block";
+    }
+}
+
     if (recipe) {
         // Populate input fields and checks if fields exist
         if (recipe.title) {
@@ -214,6 +223,7 @@ document.getElementById("saveChangesBtnUpdate").addEventListener("click", functi
             const updatedRecipe = {
                 recipeID: parseInt(recipeID),
                 title: document.getElementById("dishTitleUpdate").value,
+                recipeImage: uploadedImageData,
                 description: document.getElementById("dishDescrUpdate").value,
                 prepTime: document.getElementById("prepTimeUpdate").value,
                 cookTime: document.getElementById("cookTimeUpdate").value,

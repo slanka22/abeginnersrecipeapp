@@ -1,66 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipe App Home</title>
-  <link rel="stylesheet" href="../CSS Files/styles.css">
-  <script src="../JavaScript Files/recipeView.js" defer></script>
-</head>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App Home</title>
+    <link rel="stylesheet" href="../CSS Files/styles.css">
+    <script src="../JavaScript Files/recipeView.js" defer></script>
+  </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="index.html">
-        <div class="logoContainer">
-          <img src="../logos/512.png" alt="Recipe App Logo">
-          <h2 id="navTitle">Recipe App</h2>
-        </div>
-      </a>
-      <div class="navButtons">
-        <a href="addRecipe.html">
-          <button class="navBtn">Add a recipe</button>
-        </a>
+  <body>
+    <header>
+      <nav>
         <a href="index.html">
-          <button class="navBtn">View Recipes</button>
+          <div class="logoContainer">
+            <img src="../logos/512.png" alt="Recipe App Logo">
+            <h2 id="navTitle">Recipe App</h2>
+          </div>
         </a>
-      </div>
-    </nav>
-  </header>
-  <div class="mainContentContainer">
-    <div class = "titleCard">
-      <div class="titleAndButtons">
-        <h1 id="recipeTitle"> Default Recipe Title </h1>
-        <div class="buttonContainer">
-          <!-- <a href="editRecipe.html">
-            <button class="navBtn">Edit Recipe</button>
-          </a> -->
-          <button id="editButton" class="navBtn">Edit Recipe</button>
-          <button class="navBtn" id="deleteButton">Delete Recipe</button>
+        <div class="navButtons">
+          <a href="addRecipe.html">
+            <button class="navBtn">Add a recipe</button>
+          </a>
+          <a href="index.html">
+            <button class="navBtn">View Recipes</button>
+          </a>
         </div>
+      </nav>
+    </header>
+    <div class="mainContentContainer">
+      <div class = "titleCard">
+        <div class="titleAndButtons">
+          <h1 id="recipeTitle"> Default Recipe Title </h1>
+          <div class="buttonContainer">
+            <button id="editButton" class="navBtn">Edit Recipe</button>
+            <button class="navBtn" id="deleteButton">Delete Recipe</button>
+          </div>
+        </div>
+        <img class = "recipeImage" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBC7QuVp-W5YBTP3qWiZIuSYFy8zkQFmLk8hBOvGhDG8UxuqyMilIJcuuQLhC151Qph0ISV7DKJ22xyW4XmSkBZ1lMTp9ixhQqYLx-VqRu&s=10" alt = "Default Recipe Image">
+
+        <h3>Info</h3>
+        <p>Total Time: <span id="totalTime">30</span> minutes</p>
+        <p>Prep Time: <span id="prepTime">10</span> minutes</p>
+        <p>Cook Time: <span id="cookTime">8</span> minutes</p>
+        <p>Servings: <span id="servings">4</span> meals</p><br>
+        <p id="recipeDescription">Description goes here</p>
+        <hr>
       </div>
-      <img class = "recipeImage" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBC7QuVp-W5YBTP3qWiZIuSYFy8zkQFmLk8hBOvGhDG8UxuqyMilIJcuuQLhC151Qph0ISV7DKJ22xyW4XmSkBZ1lMTp9ixhQqYLx-VqRu&s=10" alt = "Default Recipe Image">
 
-      <h3>Info</h3>
-      <p>Total Time: <span id="totalTime">30</span> minutes</p>
-      <p>Prep Time: <span id="prepTime">10</span> minutes</p>
-      <p>Cook Time: <span id="cookTime">8</span> minutes</p>
-      <p>Servings: <span id="servings">4</span> meals</p><br>
-      <p id="recipeDescription">Description goes here</p>
-      <hr>
+      <div class = "ingredientsCard"> 
+          <h2 class = "ingredientsTitle"> Ingredients </h2>
+          <ul class = "ingredientsList" id="ingredientsList">
+          </ul>
+      </div>
+
+      <div class = "instructionsCard">
+        <h2 class = "instructionsTitle"> Instructions </h2>
+          <ol class = "instructionsList" id="instructionsList">
+          </ol>
+      </div>
     </div>
 
-    <div class = "ingredientsCard"> 
-        <h2 class = "ingredientsTitle"> Ingredients </h2>
-        <ul class = "ingredientsList" id="ingredientsList">
-        </ul>
-    </div>
-
-    <div class = "instructionsCard">
-      <h2 class = "instructionsTitle"> Instructions </h2>
-        <ol class = "instructionsList" id="instructionsList">
-        </ol>
-    </div>
-  </div>
-
-</body>
+  </body>

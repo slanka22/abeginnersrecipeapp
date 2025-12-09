@@ -6,6 +6,7 @@
   <title>Edit Recipe</title>
   <link rel="stylesheet" href="../CSS Files/styles.css">
   <script src="../JavaScript Files/editRecipe.JS" defer></script>
+  <script src="../JavaScript Files/captureImage.js" defer></script>
 </head>
 
 <body>
@@ -23,6 +24,17 @@
   <div class="mainContentContainer">
     <h1 style = "text-align: center;">Edit a Recipe</h1>
     <div class="inputsContainer">
+        <div class="cameraContainer">
+
+          <label style="font-weight: bold;">Dish Image:</label><br>
+          <video id="cameraView" autoplay playsinline style="width: 300px; display:none;"></video>
+          <button id="startCameraBtn" class="navBtn" style="margin-top: 10px;">Start Camera</button>
+          <button id="takePhotoBtn" class="navBtn" style="display:none; margin-top: 10px;">Capture Photo</button>
+          <canvas id="cameraCanvas" style="display:none;"></canvas>
+          <img id="capturedImage" style="display:none; width:300px; margin-top: 10px; border-radius: 8px;">
+        </div>
+      <br>
+
       <label for="dishTitleUpdate" style = "text-align: left; font-weight: bold;">Dish Title:</label>
       <input type="text"  id="dishTitleUpdate" placeholder="Egg Salad" required>
 

@@ -6,6 +6,7 @@
   <title>Add Recipe</title>
   <link rel="stylesheet" href="../CSS Files/styles.css">
   <script src="../JavaScript Files/NewRecipe.JS" defer></script>
+  <script src="../JavaScript Files/captureImage.js" defer></script>
 </head>
 
 <body>
@@ -19,9 +20,6 @@
       </a>
 
         <div class="navButtons">
-          <!-- <a href="addRecipe.html">
-            <button>Add a recipe</button>
-          </a> -->
           <a href="index.html">
             <button class="navBtn">View Recipes</button>
           </a>
@@ -33,6 +31,17 @@
   <div class="mainContentContainer">
     <h1 style = "text-align: center;">Create a Recipe</h1>
     <div class="inputsContainer">
+      
+      <label style="font-weight: bold;">Dish Image:</label><br>
+        <video id="cameraView" autoplay playsinline style="width: 300px; display:none; margin-top: 10px;"></video>
+        <button id="startCameraBtn" class="navBtn" style="margin-top: 10px;">Start Camera</button>
+        <button id="takePhotoBtn" class="navBtn" style="display:none; margin-top: 10px;">Capture Photo</button>
+        <canvas id="cameraCanvas" style="display:none;"></canvas>
+        <img id="capturedImage" style="display:none; width:300px; margin-top: 10px; border-radius: 8px;">
+      </div>
+
+      <br>
+      
       <label for="dishTitle" style = "text-align: left; font-weight: bold;">Dish Title:</label>
       <input type="text"  id="dishTitle" placeholder="Egg Salad" required>
 
@@ -89,20 +98,11 @@
           </div>
         </div>
       </div> 
-
-      <!-- <div class="listContainer">
-        <div class="ingredientListContainer"><br>
-          <ul id="ingredientList">
-          </ul>
-        </div>
-        <div class="instructionListContainer"><br>
-          <ol id="instructionList">
-          </ol>
-        </div>
-      </div> -->
     </div>
 
-    <button class="navBtn" id="saveChangesBtn">Save Changes</button>
+    <div style="text-align: center;">
+        <button class="navBtn" id="saveChangesBtn">Save Changes</button>
+    </div>
   </div>
 </body>
 

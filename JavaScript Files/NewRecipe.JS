@@ -78,6 +78,7 @@ document.getElementById("saveChangesBtn").addEventListener("click", () => {
         //recipeID: currentRecipeCount + 1,
         recipeID: lastID + 1,
         title: document.getElementById("dishTitle").value,
+        recipeImage: uploadedImageData,
         description: document.getElementById("dishDescr").value,
         prepTime: document.getElementById("prepTime").value,
         cookTime: document.getElementById("cookTime").value,

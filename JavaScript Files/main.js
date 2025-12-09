@@ -21,7 +21,10 @@ function loadRecipes(){
 
         card.innerHTML = `
         <div class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBC7QuVp-W5YBTP3qWiZIuSYFy8zkQFmLk8hBOvGhDG8UxuqyMilIJcuuQLhC151Qph0ISV7DKJ22xyW4XmSkBZ1lMTp9ixhQqYLx-VqRu&s=10" alt="${recipeTitle}">
+        <img 
+            src="${recipe.recipeImage || 'https://via.placeholder.com/200'}" 
+            alt="${recipeTitle}"
+        >
         <h3>${recipeTitle}</h3>
         <p>Total Time: ${parseInt(recipePrep) + parseInt(recipeCook)} mins</p>
         <p>Servings: ${recipeServings} servings</p>

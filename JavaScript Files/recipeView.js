@@ -26,6 +26,9 @@ function pushList(array, listElementID){
 function loadRecipes(){
     // Display the recipe details
     document.querySelector("#recipeTitle").textContent = recipe.title;
+    const imageElement = document.querySelector(".recipeImage");
+    imageElement.src = recipe.recipeImage || "https://via.placeholder.com/400";
+    imageElement.alt = recipe.title;
     document.querySelector("#recipeDescription").textContent = recipe.description;
     document.querySelector("#prepTime").textContent = recipe.prepTime;
     document.querySelector("#cookTime").textContent = recipe.cookTime;
