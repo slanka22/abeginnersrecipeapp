@@ -41,11 +41,6 @@ function loadRecipes(){
     if (recipe.instructions && Array.isArray(recipe.instructions)){
         pushList(recipe.instructions, 'instructionsList');
     }
-
-
-
-    /* document.querySelector("#ingredientsText").textContent = recipe.ingredients;
-    document.querySelector("#instructionsText").textContent = recipe.instructions; */
 }
 
 const deleteRecipeButton = document.querySelector("#deleteButton");
