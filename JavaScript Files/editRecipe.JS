@@ -92,7 +92,7 @@ function loadRecipeData(recipeID) {
     }
 }
 
-// Helper function to add ingredient to list (extracted for reuse)
+// Helper function to add ingredient to list
 function addIngredientToList(ingredTextField, ingredList) {
     const listItem = document.createElement("li");
     const listText = document.createElement('span');
@@ -115,7 +115,7 @@ function addIngredientToList(ingredTextField, ingredList) {
     ingredList.appendChild(listItem);
 }
 
-// Helper function to add instruction to list (extracted for reuse)
+// Helper function to add instruction to list 
 function addInstructionToList(instructTextField, instructList) {
     const listItem = document.createElement("li");
     const listText = document.createElement('span');
