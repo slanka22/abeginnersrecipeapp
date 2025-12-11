@@ -131,6 +131,12 @@ nav {
   padding: 24px 20px; /* horizontal padding for mobile*/
 }
 
+@media (min-width: 300px) and (max-width: 1020px){
+  .recipeImage {
+    width: 300px;
+  }
+}
+
 .titleAndButtons {
   display: flex;
   flex-direction: row;
