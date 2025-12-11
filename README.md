@@ -12,8 +12,6 @@ A search bar allows filtering recipes by name.
 
 Recipes are organized as `<div>` elements using flexbox and wrapped in `<a>` tags linking to the recipe view page.
 
----
-
 ### `addRecipe.html`
 Allows users to **add a new recipe** using HTML form elements.  
 Collected data includes:
@@ -27,15 +25,11 @@ Collected data includes:
 
 After clicking **Save**, the recipe is stored in localStorage.
 
----
-
 ### `editRecipe.html`
 Allows users to **edit an existing recipe**.  
 Accessible from `recipeView.html` via the Edit button.
 
 The page loads form fields pre-populated with recipe data from localStorage, allowing the user to modify and save changes.
-
----
 
 ### `recipeView.html`
 Used to **display a saved recipe**.  
@@ -65,15 +59,11 @@ Runs immediately after HTML loads.
 #### `loadRecipes()`
 Reads all recipes from localStorage and populates `index.html` with dynamically generated recipe cards.
 
----
-
 ### `captureImage.js`
 Handles capturing and uploading images via device camera.  
 Used by both `addRecipe.html` and `editRecipe.html`.
 
 Captured images are saved into localStorage for previewing and attaching to recipes.
-
----
 
 ### `searchRecipe.js`
 Provides recipe search functionality on the home page.
@@ -83,8 +73,6 @@ Provides recipe search functionality on the home page.
 - Hides recipes whose titles do not match the query  
 - Displays recipes that contain the query text  
 
----
-
 ### `NewRecipe.js`
 Linked to `addRecipe.html`.  
 Handles dynamic list creation and saving new recipes to localStorage.
@@ -92,8 +80,6 @@ Handles dynamic list creation and saving new recipes to localStorage.
 #### Key Functions
 - **`addIngred()` / `addInstruct()`**: Adds items to ingredient/instruction lists, each with a delete button.  
 - **Save button function**: Collects all fields, constructs a recipe object, stores it in localStorage using JSON, and reloads the page.
-
----
 
 ### `editRecipe.js`
 Linked to `editRecipe.html`.  
@@ -104,8 +90,6 @@ Uses the recipe ID from the query string to load existing data into the form.
 - **`addIngredientToList()` / `addInstructionToList()`**: Populates saved items as list elements.  
 - **`addIngred()` / `addInstruct()`**: Allows adding new ingredients/instructions with delete buttons.  
 - **`saveRecipes()`**: Writes updated recipe data back into localStorage.
-
----
 
 ### `recipeView.js`
 Handles loading the recipe selected from `index.html`.
